@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+.app {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/public/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  width: 40%;
+  height: fit-content;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  box-shadow: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  padding: 2%;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 580px;
+}
+
+button {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  border-radius: 15px;
+  height: fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  background-color: #f1c40f;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button span {
+  color: #164ca7;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 80%;
+    height: 30%;
+  }
+  button {
+    width: fit-content;
+  }
+}
+
+button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
